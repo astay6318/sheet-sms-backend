@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ### Set up Google API:
 - Create a project on the Google Cloud Platform.
 - Enable Google Sheet API and Google Drive API.
-- Create credentials, download the JSON key, and save it in the same loaction as the project.
+- Create credentials for the service account, download the JSON key, and save it in the same loaction as the project.
 - Open an untitled Google Sheet and give access to the user mentioned in the JSON key.
 - Update the json_file_path in signals.py with the path name of the downloaded API key.
 - Find the sheet ID as depicted in the instructions.    
