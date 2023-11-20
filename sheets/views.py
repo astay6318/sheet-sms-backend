@@ -4,6 +4,7 @@ from .models import Response,Question,Answer,Form
 from .serializers import Response_Serializer,Form_Serializer,Answer_Serializer,Question_Serializer
 from django.http.response import JsonResponse
 from rest_framework import status
+
 #using ModelViewSet we have to create a router to use it with the api
 class ResponseViewSet(viewsets.ModelViewSet):
     queryset = Response.objects.all()
@@ -17,6 +18,7 @@ class ResponseViewSet2(APIView):
     serializer_class = Response_Serializer
     def post(self, request):
         data = request.data
+        #use the serializers to check the validity of the response
         serializer = Response_Serializer(data=data)
         if serializer.is_valid():
             serializer.save()

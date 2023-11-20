@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import Response
 from .models import Form,Answer,Question
 
+#to validate the request body
+
 class Form_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Form
