@@ -54,15 +54,15 @@ pip install -r requirements.txt
 - Obtain twilio_account_sid and auth_token by creating an account on the Twilio official website.
 - Use these credentials in the .env file.
 
-##Usage
+## Usage
 ```
 #run the development server     
 python manage.py runserver    
 ```
 
--Create the forms at ```http://127.0.0.1:8000/sheets/form/ ``` using the fields: `form_id` and `form_name`
--Create the questions at ```http://127.0.0.1:8000/sheets/question/ ``` using the fields: `question_id`, `form`, `question_text`, and `question_type`. Note that `form` is the foreign key for the form.
--Submit responses at ``` http://127.0.0.1:8000/sheets/submit-response/ ``` with fields: `user_id`, `answers`, `form`, `question`. Here, `form` and `question` are foreign keys, and user_id and answers represent the user and their responses, respectively.
+-Create the forms at ```http://127.0.0.1:8000/sheets/form/``` ,using the fields: `form_id` and `form_name`     
+-Create the questions at ```http://127.0.0.1:8000/sheets/question/``` using the fields: `question_id`, `form`, `question_text`, and `question_type`. Note that `form` is the foreign key for the form       
+-Submit responses at ``` http://127.0.0.1:8000/sheets/submit-response/``` with fields: `user_id`, `answers`, `form`, `question`. Here, `form` and `question` are foreign keys, and user_id and answers represent the user and their responses, respectively.        
 The Google Sheets API collects and updates this response, and Twilio sends the corresponding message.
 
 
